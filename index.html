@@ -19,17 +19,21 @@
     <body>
         
         <div id="app">
-            <div class="container text-center pt-3">
+            <div class="container text-center pt-3 d-flex flex-column align-items-center">
                 <h1>To Do List</h1>
                 <div class="add-element-wrapper mt-4">
                     <input type="text" placeholder="Scrivi qui una cosa da fare" v-model="newElementText" v-on:keyup.enter="addNewToDo">
                     <button class="btn btn-success d-block m-auto mt-2" @click="addNewToDo">Aggiungi alla lista</button>
                 </div>
                 <div class="list-wrapper text-start mt-4">
-                    <ul>
-                        <li v-for="(element, index) in todo" :class="(element.done === false) ? '' : 'd-none'" >
-                            <i class="fa-solid fa-x me-2" @click="changeDone(index)"></i>
-                            {{element.text}}
+                    <ul class="p-0">
+                        <li v-for="(element, index) in todo" class="d-flex justify-content-between align-items-center">
+                            <p class="m-0" :class="(element.done === true) ? 'text-decoration-line-through' : ''">
+                                <i class="fa-solid fa-x me-2" @click="deleteElement(index)"></i>
+                                {{element.text}}
+                            </p>
+                            <button class="btn btn-success" @click="changeDone(index)" :class="(element.done === true) ? 'd-none' : ''">Done</button>
+                            <button class="btn btn-danger" @click="changeDone(index)" :class="(element.done === false) ? 'd-none' : ''">Not done</button>
                         </li>
                     </ul>
                 </div>

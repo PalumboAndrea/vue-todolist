@@ -32,6 +32,9 @@ createApp({
         changeDone: function(index){
             this.todo[index].done = !this.todo[index].done;
         },
+        deleteElement: function(index){
+            this.todo.splice(index, 1)
+        },
         addNewToDo: function(){
             if (this.newElementText == '' || this.newElementText.length <=2){
                 alert('Per favore inserisci qualcosa di sensato');
