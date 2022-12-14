@@ -33,19 +33,15 @@ createApp({
             this.todo[index].done = !this.todo[index].done;
         },
         addNewToDo: function(){
-            const newAddedElement = {};
-            newAddedElement.text = this.newElementText;
-            newAddedElement.done = false;
-            this.todo.push(newAddedElement);
-            this.newElementText = '';
+            if (this.newElementText == '' || this.newElementText.length <=2){
+                alert('Per favore inserisci qualcosa di sensato');
+            } else {
+                const newAddedElement = {};
+                newAddedElement.text = this.newElementText;
+                newAddedElement.done = false;
+                this.todo.push(newAddedElement);
+                this.newElementText = '';
+            }
         }
-
-
     }
-
-
-
-
-
-
 }).mount('#app')

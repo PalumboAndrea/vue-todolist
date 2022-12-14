@@ -23,7 +23,7 @@
                 <h1>To Do List</h1>
                 <div class="add-element-wrapper mt-4">
                     <input type="text" placeholder="Scrivi qui una cosa da fare" v-model="newElementText" v-on:keyup.enter="addNewToDo">
-                    <button class="btn btn-success d-block m-auto mt-2" @click="addNewToDo" >Aggiungi alla lista</button>
+                    <button class="btn btn-success d-block m-auto mt-2" @click="addNewToDo">Aggiungi alla lista</button>
                 </div>
                 <div class="list-wrapper text-start mt-4">
                     <ul>
@@ -32,21 +32,8 @@
                             {{element.text}}
                         </li>
                     </ul>
-                    
                 </div>
-                
-
-
-
-
             </div>
-
-
-
-
-
-
-
         </div>
 
         <!-- Import Vue -->
