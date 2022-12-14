@@ -3,6 +3,10 @@ body{
     color: white;
 }
 
+.add-element-wrapper input{
+    width: 200px;
+}
+
 li {
     list-style-type: none;
     border: 1px solid white;

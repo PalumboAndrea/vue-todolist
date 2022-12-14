@@ -24,17 +24,22 @@ createApp({
                     text: 'Andare a giocare a tennis' ,
                     done: false,
                 },
-
-            ]
+            ],
+            newElementText : '',
         }
     },
     methods: {
         changeDone: function(index){
             this.todo[index].done = !this.todo[index].done;
         },
-        deleteElement: function(){
-            this.todo[index].done = !this.todo[index].done;
+        addNewToDo: function(){
+            const newAddedElement = {};
+            newAddedElement.text = this.newElementText;
+            newAddedElement.done = false;
+            this.todo.push(newAddedElement);
+            this.newElementText = '';
         }
+
 
     }
 
