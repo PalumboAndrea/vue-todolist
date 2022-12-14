@@ -19,7 +19,28 @@
     <body>
         
         <div id="app">
-            
+            <div class="container text-center pt-3">
+                <h1>To Do List</h1>
+                <div class="list-wrapper text-start mt-4">
+                    <ul>
+                        <li v-for="(element, index) in todo" :class="(element.done === false) ? 'text-decoration-line-through' : ''" >
+                            {{element.text}}
+                        </li>
+                    </ul>
+                </div>
+                
+
+
+
+
+            </div>
+
+
+
+
+
+
+
         </div>
 
         <!-- Import Vue -->
