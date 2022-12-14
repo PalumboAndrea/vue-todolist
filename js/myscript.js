@@ -6,7 +6,7 @@ createApp({
             todo : [
                 {
                     text: 'Fare la lavatrice' ,
-                    done: true,
+                    done: false,
                 },
                 {
                     text: 'Fare la lavastoviglie' ,
@@ -29,6 +29,12 @@ createApp({
         }
     },
     methods: {
+        changeDone: function(index){
+            this.todo[index].done = !this.todo[index].done;
+        },
+        deleteElement: function(){
+            this.todo[index].done = !this.todo[index].done;
+        }
 
     }
 
