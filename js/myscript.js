@@ -33,7 +33,7 @@ createApp({
             this.todo[index].done = !this.todo[index].done;
         },
         deleteElement: function(index){
-            this.todo.splice(index, 1)
+            this.todo.splice(index, 1);
         },
         addNewToDo: function(){
             if (this.newElementText == '' || this.newElementText.length <=2){

@@ -32,8 +32,10 @@
                                 <i class="fa-solid fa-x me-2" @click="deleteElement(index)"></i>
                                 {{element.text}}
                             </p>
-                            <button class="btn btn-success" @click="changeDone(index)" :class="(element.done === true) ? 'd-none' : ''">Done</button>
-                            <button class="btn btn-danger" @click="changeDone(index)" :class="(element.done === false) ? 'd-none' : ''">Not done</button>
+                            <div class="button-wrapper">
+                                <button class="btn btn-success me-2" @click="changeDone(index)" :disabled="element.done">Done</button>
+                                <button class="btn btn-danger" @click="changeDone(index)" :disabled="!element.done">Not done</button>
+                            </div>
                         </li>
                     </ul>
                 </div>
